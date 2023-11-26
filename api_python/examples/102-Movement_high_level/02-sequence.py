@@ -102,8 +102,6 @@ def create_cartesian_action(base_cyclic):
 
     return action
 
-#
-#
 # Example core functions
 #
 
@@ -181,6 +179,7 @@ def example_create_sequence(base, base_cyclic):
         print("Timeout on action notification wait")
     return finished
 
+
 def main():
     # Import the utilities helper module
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -200,6 +199,7 @@ def main():
         success = True
         success &= example_move_to_home_position(base)
         success &= example_create_sequence(base, base_cyclic)
+        
         
         # You can also refer to the 110-Waypoints examples for an alternate way to execute
         # a trajectory defined by a series of waypoints in joint space or in Cartesian space

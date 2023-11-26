@@ -97,6 +97,7 @@ def example_trajectory(base, base_cyclic):
     base_servo_mode.servoing_mode = Base_pb2.SINGLE_LEVEL_SERVOING
     base.SetServoingMode(base_servo_mode)
     product = base.GetProductConfiguration()
+
     waypointsDefinition = tuple(tuple())
     if(   product.model == Base_pb2.ProductConfiguration__pb2.MODEL_ID_L53 
        or product.model == Base_pb2.ProductConfiguration__pb2.MODEL_ID_L31):
